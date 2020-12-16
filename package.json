@@ -4,7 +4,8 @@
   "description": "This website is created to test HTML/CSS skills",
   "scripts": {
     "test": "test",
-    "scss-compiler": "sass --watch asset/css/style.scss asset/css/style.css"
+    "scss-dev": "sass --watch asset/css/style.scss asset/css/style.css",
+    "scss-build": "sass asset/css/style.scss asset/css/style.css"
   },
   "keywords": [
     "myseason"
