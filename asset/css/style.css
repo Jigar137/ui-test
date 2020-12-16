@@ -30,7 +30,7 @@ body #back-to-top {
 
 header {
   text-transform: uppercase;
-  background-image: url("/asset/images/leaves.svg");
+  background-image: url("../images/leaves.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -363,7 +363,7 @@ main section.section-4 button:hover {
 }
 
 footer {
-  background-image: url("/asset/images/Footer.png");
+  background-image: url("../images/Footer.png");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
