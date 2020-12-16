@@ -1,0 +1,512 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+/**
+Theme-button mixin to create button with given color and which matches thems styling and transitions
+*/
+/**
+   This is common code to define section headers with reusable stylings
+*/
+body {
+  margin: 0%;
+  padding: 0%;
+}
+body #back-to-top {
+  color: #fff;
+  background-color: #53d3de;
+  z-index: 999;
+  display: inline-block;
+  position: fixed;
+  visibility: hidden;
+  bottom: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  opacity: 0.8;
+}
+
+header {
+  text-transform: uppercase;
+  background-image: url("/asset/images/leaves.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+header .pre-navbar div {
+  display: flex;
+  align-items: center;
+}
+header .pre-navbar div i {
+  font-size: 8px;
+  color: whitesmoke;
+  background-color: #105b6e;
+  border-radius: 50%;
+  margin-right: 10px;
+  padding: 3px 4px 4px 4px;
+}
+header .pre-navbar div .pre-navtext {
+  font-size: 12px;
+  color: #105b6e;
+  font-family: "Oswald", sans-serif;
+}
+header nav .navbar-brand {
+  width: 11%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+}
+header nav .navbar-brand img {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+header nav .navbar-nav {
+  width: 42%;
+}
+header nav .navbar-nav li {
+  margin-right: 1rem;
+}
+header nav .navbar-nav li .nav-link {
+  color: #105b6e !important;
+  font-family: "Oswald", sans-serif;
+}
+header nav .navbar-nav li .active {
+  border-bottom: 3px solid #105b6e;
+}
+header nav .navbar-nav li :hover {
+  border-bottom: 3px solid #1a92b1;
+  transition: all 0.2s ease;
+}
+
+main section.section-1 {
+  position: relative;
+  background-image: url("../images/home-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-transform: uppercase;
+  color: whitesmoke !important;
+}
+main section.section-1 .main-text {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  max-width: 30%;
+  font-size: 1.5rem;
+  border-top: 4px dotted whitesmoke;
+  border-bottom: 4px dotted whitesmoke;
+  margin-top: 11%;
+  margin-bottom: 10%;
+}
+main section.section-1 .call-to-action {
+  border-radius: 3px;
+  color: whitesmoke;
+  font-size: 14px;
+  background-color: #a2c060;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #7b973c;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 10%;
+}
+main section.section-1 .call-to-action i {
+  margin-left: 0.2rem;
+  font-weight: 600;
+}
+main section.section-1 .call-to-action:hover {
+  background-color: #8aaa43;
+  border-bottom: 2px solid #6c8535;
+  transition: all 0.5s ease-in-out;
+}
+@media only screen and (max-width: 376px) {
+  main section.section-1 .call-to-action {
+    font-size: 10px;
+  }
+}
+main section.section-1 .secondary-nav {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  direction: rtl;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+}
+main section.section-1 .secondary-nav li a {
+  cursor: pointer;
+  text-decoration: none;
+  color: whitesmoke;
+}
+main section.section-1 .secondary-nav li :hover {
+  color: #b7ce85;
+  transition: all 0.2s ease;
+}
+main section.section-1 .secondary-nav li.active a {
+  color: #a2c060;
+}
+main section.section-2 {
+  background-color: #f4f3f1;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+main section.section-2 .sec-heading {
+  font-family: "Arial Narrow";
+  font-weight: 700;
+}
+main section.section-2 .product {
+  margin: 0 auto;
+  max-width: 180px;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+main section.section-2 .product .product-img-container {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section.section-2 .product .product-img-container img {
+  height: 100%;
+  max-width: 100%;
+}
+main section.section-2 .product h4 {
+  font-size: 1.2rem;
+  color: #105b6e;
+  margin-top: 20px;
+}
+main section.section-2 .product p {
+  color: #105b6e;
+  font-family: "Arial Narrow";
+  text-transform: none;
+  font-size: 12px;
+}
+main section.section-2 .combo-product-container {
+  text-align: center;
+  background-color: #a2c060;
+  color: whitesmoke;
+  max-width: 95%;
+  border-radius: 3px;
+  padding: 2.5rem;
+  margin: 1.8rem auto 0 auto;
+  padding-bottom: 8rem;
+}
+main section.section-2 .combo-product-container h4 {
+  font-size: 18px;
+}
+main section.section-2 .combo-product-container p {
+  font-family: "Arial Narrow";
+  text-transform: none;
+  font-size: 12px;
+}
+main section.section-2 .combo-product-container .combo-call-to-action {
+  border-radius: 3px;
+  color: whitesmoke;
+  font-size: 14px;
+  background-color: #094b65;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #03171f;
+  text-transform: uppercase;
+  padding: 8px 16px;
+}
+main section.section-2 .combo-product-container .combo-call-to-action i {
+  margin-left: 0.2rem;
+  font-weight: 600;
+}
+main section.section-2 .combo-product-container .combo-call-to-action:hover {
+  background-color: #052836;
+  border-bottom: 2px solid #010507;
+  transition: all 0.5s ease-in-out;
+}
+@media only screen and (max-width: 376px) {
+  main section.section-2 .combo-product-container .combo-call-to-action {
+    font-size: 10px;
+  }
+}
+main section.section-2 .combo-product-img-container img {
+  max-width: 125%;
+  height: auto;
+  margin-top: -7rem;
+  margin-left: -3.5rem;
+}
+main section.section-3 {
+  background-color: #f4f3f1;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+main section.section-3 .sec-heading {
+  font-family: "Arial Narrow";
+  font-weight: 700;
+}
+main section.section-3 .row {
+  margin-top: 2rem;
+}
+main section.section-3 .w-card {
+  height: 110px;
+  width: 95%;
+  position: relative;
+  color: whitesmoke;
+  margin: 60px 0;
+}
+main section.section-3 .w-card img {
+  height: 140px;
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  width: 90px;
+}
+main section.section-3 .w-card .w-card-title {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+}
+main section.section-3 .w-card .w-card-subtitle {
+  position: absolute;
+  bottom: 12px;
+  text-transform: none;
+  font-size: 11px;
+  font-family: "Arial Narrow";
+  left: 20px;
+}
+main section.section-3 .w-card .w-card-logo {
+  position: absolute;
+  top: 120px;
+  right: 70px;
+}
+main section.section-3 .w-card .w-card-logo img {
+  height: 50px;
+  width: 50px;
+}
+main section.section-3 .w-card.w-card-1 {
+  background-color: #ce675e;
+}
+main section.section-3 .w-card.w-card-2 {
+  background-color: #00808b;
+}
+main section.section-3 .w-card.w-card-3 {
+  background-color: #9e85a3;
+}
+main section.section-4 {
+  background-color: #f4f3f1;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+main section.section-4 .sec-heading {
+  font-family: "Arial Narrow";
+  font-weight: 700;
+}
+main section.section-4 .w-card {
+  background-color: white;
+  min-width: 180px;
+  min-height: 280px;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+main section.section-4 .w-card .w-card-img {
+  margin-bottom: 40px;
+}
+main section.section-4 .w-card .w-card-img img {
+  max-height: 150px;
+}
+main section.section-4 .w-card .w-card-title {
+  font-family: "Oswald", sans-serif;
+  color: #105b6e;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+main section.section-4 .w-card .w-card-subtitle {
+  text-transform: none;
+  font-family: "Arial Narrow";
+  font-size: 10px;
+  color: #b9b9b9;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main section.section-4 button {
+  border-radius: 3px;
+  color: whitesmoke;
+  font-size: 14px;
+  background-color: #a2c060;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #7b973c;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  margin: 0 auto;
+}
+main section.section-4 button i {
+  margin-left: 0.2rem;
+  font-weight: 600;
+}
+main section.section-4 button:hover {
+  background-color: #8aaa43;
+  border-bottom: 2px solid #6c8535;
+  transition: all 0.5s ease-in-out;
+}
+@media only screen and (max-width: 376px) {
+  main section.section-4 button {
+    font-size: 10px;
+  }
+}
+
+footer {
+  background-image: url("/asset/images/Footer.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #105b6e;
+  font-size: 14px;
+  font-weight: 600;
+  overflow-x: hidden;
+}
+footer h2 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+footer .row {
+  padding: 35px 15px;
+}
+footer .links-section ul {
+  list-style: none;
+  padding: 0;
+}
+footer .links-section ul li:before {
+  content: "";
+  font-size: 10px;
+  font-weight: 600;
+  color: #a2c060;
+  font-family: bootstrap-icons !important;
+  display: inline-block;
+  margin-left: -1.3em;
+  /* same as padding-left set on li */
+  width: 1.3em;
+  /* same as padding-left set on li */
+}
+footer .links-section ul li a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #105b6e;
+}
+footer .links-section ul li :hover {
+  color: #1a92b1;
+}
+footer .links-section .social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+footer .links-section .social-media i {
+  color: whitesmoke;
+  background-color: #105b6e;
+  border-radius: 50%;
+  padding: 4px 8px 8px 8px;
+  cursor: pointer;
+  margin: 0 6px;
+}
+footer .links-section .social-media :hover {
+  background: #0a3641;
+}
+footer .footer-info button {
+  border-radius: 3px;
+  color: whitesmoke;
+  font-size: 14px;
+  background-color: #a2c060;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #7b973c;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+footer .footer-info button i {
+  margin-left: 0.2rem;
+  font-weight: 600;
+}
+footer .footer-info button:hover {
+  background-color: #8aaa43;
+  border-bottom: 2px solid #6c8535;
+  transition: all 0.5s ease-in-out;
+}
+@media only screen and (max-width: 376px) {
+  footer .footer-info button {
+    font-size: 10px;
+  }
+}
+
+/* 
+For Landscape tablet size devides
+*/
+@media only screen and (max-width: 992px) {
+  header {
+    background-image: none;
+  }
+  header nav .nav-section-2 {
+    width: 100%;
+    padding-top: 0 !important;
+  }
+}
+/* 
+For Portrait tablet size devides
+*/
+@media only screen and (max-width: 768px) {
+  main section {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+  main section.section-2 .product {
+    max-width: 100%;
+  }
+
+  footer {
+    padding: 3rem;
+  }
+}
+/* 
+For mobile devides
+*/
+@media only screen and (max-width: 376px) {
+  header .pre-navbar {
+    display: none !important;
+  }
+  header nav .navbar-brand {
+    width: 16%;
+    top: 4px;
+  }
+
+  main .section-1 .main-text {
+    font-size: 1rem !important;
+    margin-top: 50% !important;
+    margin-bottom: 40% !important;
+    max-width: 50% !important;
+  }
+  main .section-1 .call-to-action {
+    margin-bottom: 50% !important;
+  }
+  main .section-1 .secondary-nav {
+    display: none !important;
+  }
+
+  footer .row {
+    text-align: center;
+  }
+  footer .row div {
+    margin-bottom: 3rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
